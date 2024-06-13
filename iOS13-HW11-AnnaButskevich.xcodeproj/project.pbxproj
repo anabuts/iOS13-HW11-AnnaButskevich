@@ -13,6 +13,7 @@
 		C52D213D2C18588C005055BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52D213C2C18588C005055BC /* Assets.xcassets */; };
 		C52D21402C18588C005055BC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C52D213F2C18588C005055BC /* Base */; };
 		C52D21492C18BC90005055BC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C52D21482C18BC90005055BC /* SnapKit */; };
+		C52D21522C1B2910005055BC /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D21512C1B2910005055BC /* UITextField+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C52D213C2C18588C005055BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C52D213F2C18588C005055BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C52D21412C18588C005055BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C52D21512C1B2910005055BC /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		C52D21322C18588B005055BC /* iOS13-HW11-AnnaButskevich */ = {
 			isa = PBXGroup;
 			children = (
+				C52D214C2C1B2845005055BC /* Extensions */,
 				C52D21332C18588B005055BC /* AppDelegate.swift */,
 				C52D21352C18588B005055BC /* SceneDelegate.swift */,
 				C52D21372C18588B005055BC /* ViewController.swift */,
@@ -64,6 +67,22 @@
 				C52D21412C18588C005055BC /* Info.plist */,
 			);
 			path = "iOS13-HW11-AnnaButskevich";
+			sourceTree = "<group>";
+		};
+		C52D214C2C1B2845005055BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C52D21502C1B28E9005055BC /* UIKit+Extensions */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C52D21502C1B28E9005055BC /* UIKit+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C52D21512C1B2910005055BC /* UITextField+Extensions.swift */,
+			);
+			path = "UIKit+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C52D21382C18588B005055BC /* ViewController.swift in Sources */,
+				C52D21522C1B2910005055BC /* UITextField+Extensions.swift in Sources */,
 				C52D21342C18588B005055BC /* AppDelegate.swift in Sources */,
 				C52D21362C18588B005055BC /* SceneDelegate.swift in Sources */,
 			);
