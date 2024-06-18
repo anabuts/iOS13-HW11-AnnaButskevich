@@ -19,32 +19,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
         self.window = window
     }
-
-    func sceneDidDisconnect(_ scene: UIScene) {
-
-        print(#function)
-    }
-
-    func sceneDidBecomeActive(_ scene: UIScene) {
-
-        print(#function)
-    }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-        
-        print(#function)
-    }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        
-        print(#function)
-    }
-
-    func sceneDidEnterBackground(_ scene: UIScene) {
-
-        print(#function)
-    }
-
-
 }
 

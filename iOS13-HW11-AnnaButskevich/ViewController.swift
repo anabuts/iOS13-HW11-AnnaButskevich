@@ -38,6 +38,7 @@ final class ViewController: UIViewController {
         textField.placeholder = "Name"
         textField.backgroundColor = .white
         textField.layer.cornerRadius = 25
+        textField.clearButtonMode = .whileEditing
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.setLeftIcon(UIImage(named: "user") ?? UIImage.remove)
         return textField
@@ -51,6 +52,7 @@ final class ViewController: UIViewController {
         textField.placeholder = "Password"
         textField.backgroundColor = .white
         textField.layer.cornerRadius = 25
+        textField.clearButtonMode = .whileEditing
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.setLeftIcon(UIImage(named: "lock") ?? UIImage.remove)
         return textField
@@ -180,13 +182,21 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         setupHierarchy()
         setupLayout()
+        setupView()
     }
 
     // MARK: - Setup
 
     private func setupHierarchy() {
-        [imageView, titleLabel, nameTextField, passwordTextField, loginButton, forgotPasswordButton, networksLabel, networkHorizantalStack, signUpHorizontalStack].forEach {view.addSubview($0)
-        }
+        [imageView, 
+         titleLabel,
+         nameTextField,
+         passwordTextField,
+         loginButton,
+         forgotPasswordButton,
+         networksLabel,
+         networkHorizantalStack,
+         signUpHorizontalStack].forEach {view.addSubview($0)}
     }
 
     private func setupLayout() {
@@ -244,9 +254,18 @@ final class ViewController: UIViewController {
         }
     }
 
+    private func setupView() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
+    }
+
     // MARK: - Action
 
     @objc private func buttonPressed() {
+        passwordTextField.resignFirstResponder()
     }
-        
+
+    @objc private func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
 }
